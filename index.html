@@ -14,7 +14,15 @@
             }
         </style>
     </head>
-
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function(stream) {
+            document.getElementById('scene').setAttribute('arjs', 'sourceType: stream; source', stream);
+          })
+          .catch(function(err) {
+            console.error("Error accessing camera:", err);
+          });
+      </script>
     <body>
         <a-scene
             renderer="antialias: true; precision: medium;"
