@@ -14,28 +14,13 @@
             }
         </style>
     </head>
-    <script>
-        navigator.mediaDevices.getUserMedia({ video: true })
-          .then(function(stream) {
-            document.getElementById('scene').setAttribute('arjs', 'sourceType: stream; source', stream);
-          })
-          .catch(function(err) {
-            console.error("Error accessing camera:", err);
-          });
-      </script>
     <body>
-        <a-scene
-            renderer="antialias: true; precision: medium;"
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
+        <a-scene arjs embedded >
             <!-- Marker -->
-            <a-marker id="animated-marker" type="pattern" url="assets/marker.patt" emitevents="true">
-                <a-entity position="0 0 0.1">  <a-image src="assets/asset.jpeg" scale="0.5 0.5 0.5" rotation="-90 0 0" gesture-handler></a-image>
+            <a-marker preset="hiro">
+                <a-entity position="0 0 0.1">  
+                    <a-image src="assets/asset.jpeg" scale="0.5 0.5 0.5" rotation="-90 0 0" gesture-handler>
+                    </a-image>
                 </a-entity>
               </a-marker>
 
