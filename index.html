@@ -26,21 +26,10 @@
             gesture-detector
         >
             <!-- Marker -->
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                url="assets/marker.patt"
-                emitevents="true"
-            >
-                <!-- Object Positioned Directly on Marker -->
-                <a-image
-                    src="assets/asset.jpeg"
-                    scale="0.5 0.5 0.5"
-                    position="0 0 0"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-image>
-            </a-marker>
+            <a-marker id="animated-marker" type="pattern" url="assets/marker.patt" emitevents="true">
+                <a-entity position="0 0 0.1">  <a-image src="assets/asset.jpeg" scale="0.5 0.5 0.5" rotation="-90 0 0" gesture-handler></a-image>
+                </a-entity>
+              </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
