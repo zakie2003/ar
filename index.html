@@ -9,6 +9,7 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
+            renderer="antialias: true; precision: highp;"
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
@@ -30,6 +31,7 @@
                     src="assets/asset.jpeg"
                     scale="1 1 1"
                     class="clickable"
+                    position="0 1 0"
                     rotation="-90 0 0"
                     gesture-handler
                 ></a-image>
